@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "fac56a2d-67b5-4366-b1cf-40d0210cd1f0",
+		"name": "Quiz-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15822838"
+	},
+	"item": [
+		{
+			"name": "Get Score",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n    \"id\":2,\n    \"response\":\"Set\"\n},\n{\n    \"id\":19,\n    \"response\":\"To provide access to private members\"\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/quiz-service/quiz/submit/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"quiz-service",
+						"quiz",
+						"submit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoryName\": \"Python\",\n    \"numQuestions\": 10,\n    \"title\": \"Learners Quiz 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/quiz-service/quiz/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"quiz-service",
+						"quiz",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get questions by id list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/quiz-service/quiz/get/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"quiz-service",
+						"quiz",
+						"get",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
